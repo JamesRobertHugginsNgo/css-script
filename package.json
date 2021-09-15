@@ -1,6 +1,6 @@
 {
   "name": "css-script-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JamesRobertHugginsNgo/css-script.git"
+    "url": "git+https://github.com/JamesRobertHugginsNgo/css-script-js.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JamesRobertHugginsNgo/css-script/issues"
+    "url": "https://github.com/JamesRobertHugginsNgo/css-script-js/issues"
   },
-  "homepage": "https://github.com/JamesRobertHugginsNgo/css-script#readme",
+  "homepage": "https://github.com/JamesRobertHugginsNgo/css-script-js#readme",
   "devDependencies": {
     "eslint": "^7.32.0"
   }
