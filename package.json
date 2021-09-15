@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JamesRobertHugginsNgo/css-script/issues"
   },
-  "homepage": "https://github.com/JamesRobertHugginsNgo/css-script#readme"
+  "homepage": "https://github.com/JamesRobertHugginsNgo/css-script#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
 }
