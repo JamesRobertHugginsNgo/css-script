@@ -1,5 +1,6 @@
 function process(config = {}) {
 	const content = [];
+
 	for (const key in config) {
 		let value = config[key];
 
@@ -17,14 +18,15 @@ function process(config = {}) {
 			content.push(`${key}: ${value};`);
 		}
 	}
+
 	return content;
 }
 
-function render(config = {}) {
+export default function (config) {
 	return process(config).join(' ');
 }
 
-function prefix(property, value, prefixes = ['-webkit-', '-moz-', '-o-', '-ms-']) {
+export function prefix(property, value, prefixes = ['-webkit-', '-moz-', '-o-', '-ms-']) {
 	const properties = {};
 
 	for (let index = 0, length = prefixes.length; index < length; index++) {
@@ -35,8 +37,3 @@ function prefix(property, value, prefixes = ['-webkit-', '-moz-', '-o-', '-ms-']
 	properties[property] = value;
 	return properties;
 }
-
-export {
-	prefix,
-	render
-};

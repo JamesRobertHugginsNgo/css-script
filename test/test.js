@@ -1,9 +1,9 @@
 // const fs = import('fs');
 import fs from 'fs';
 
-import { prefix, render as cssRender } from '../index.js';
+import { default as render, prefix } from '../index.js';
 
-const content = cssRender({
+const content = render({
 	'@media all': {
 		'body': {
 			'background-color': '#ffffff',
