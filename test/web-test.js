@@ -1,5 +1,4 @@
-// const fs = import('fs');
-import fs from 'fs';
+// import { default as render, prefix } from '../index.js';
 
 import { default as render, prefix } from '../index.js';
 
@@ -22,16 +21,10 @@ const content = render({
 		'body > header': {
 			'background-color': '#000000',
 			'color': '#ffffff',
-			... prefix('background-clip', 'text')
+			... prefix('border-radius', '5px')
 		}
 	}
 });
 
-fs.writeFile('test.css', content, (error) => {
-	if (error) {
-		console.error(error);
-		return;
-	}
-
-	console.log(content);
-})
+const style = document.head.appendChild(document.createElement('style'));
+style.appendChild(document.createTextNode(content));
