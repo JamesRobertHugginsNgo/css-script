@@ -36,7 +36,7 @@ function prefix(property, value, prefixes = ['-webkit-', '-moz-', '-o-', '-ms-']
 	return properties;
 }
 
-module.exports = {
+export {
 	prefix,
 	render
 };

@@ -1,6 +1,7 @@
-const fs = require('fs');
+// const fs = import('fs');
+import fs from 'fs';
 
-const { prefix, render: cssRender } = require('../index');
+import { prefix, render as cssRender } from '../index.js';
 
 const content = cssRender({
 	'@media all': {
