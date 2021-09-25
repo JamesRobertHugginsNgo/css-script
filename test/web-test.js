@@ -1,8 +1,8 @@
-const fs = require('fs');
+// import { default as render, prefix } from '../index.js';
 
-const { prefix, render: cssRender } = require('../index');
+import { default as render, prefix } from '../index.js';
 
-const content = cssRender({
+const content = render({
 	'@media all': {
 		'body': {
 			'background-color': '#ffffff',
@@ -21,16 +21,10 @@ const content = cssRender({
 		'body > header': {
 			'background-color': '#000000',
 			'color': '#ffffff',
-			... prefix('background-clip', 'text')
+			... prefix('border-radius', '5px')
 		}
 	}
 });
 
-fs.writeFile('test.css', content, (error) => {
-	if (error) {
-		console.error(error);
-		return;
-	}
-
-	console.log(content);
-})
+const style = document.head.appendChild(document.createElement('style'));
+style.appendChild(document.createTextNode(content));
