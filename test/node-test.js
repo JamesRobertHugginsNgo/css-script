@@ -1,6 +1,4 @@
-// const fs = import('fs');
 import fs from 'fs';
-
 import { default as render, merge, prefix } from '../index.js';
 
 const content = render(merge({
