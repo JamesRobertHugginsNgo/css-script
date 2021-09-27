@@ -37,3 +37,18 @@ export function prefix(property, value, prefixes = ['-webkit-', '-moz-', '-o-', 
 	properties[property] = value;
 	return properties;
 }
+
+export function merge(target, config) {
+	for (const key in config) {
+		if (typeof config[key] === 'object' && config[key]) {
+			if (!target[key] || typeof target[key] !== 'object') {
+				target[key] = {};
+			}
+			merge(target[key], config[key]);
+		} else if (target[key] !== config[key]) {
+			target[key] = config[key];
+		}
+	}
+
+	return target;
+}
